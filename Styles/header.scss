@@ -1,0 +1,208 @@
+.header{
+    background-image: url(../IMG/header-backgrnd.png);
+    min-height: 80.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5.5rem; 
+}
+
+.pos-rel{
+    position: relative;
+}
+.header-top{
+    padding: 0 1.5rem;
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &_menuBar{
+        cursor: pointer;
+    } 
+}
+.header-menu{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    z-index: 1;
+    
+    &_item{
+        background-color: #b2f2ee;
+        
+        &-A{
+            @include Articles($_color: #505050, $_display: inline-block);
+            width: 100%;
+            padding: 0.3rem 0;
+            border: 1px solid #606061;
+        }
+    }
+}
+.header_content{
+    padding-top: 20rem;
+    text-align: center;
+    position: relative;
+    
+    @media ('max-width: 700px'){
+           padding-top: 14rem;
+        }
+    
+    &-btnCont{
+        @include button($_font-size: 1.8rem, $_color: #000000);
+        border: 2px solid #777879;
+        text-transform: uppercase;
+        margin: 0 auto;
+        width: 23rem;
+        height: 5.3rem;
+	cursor: pointer;
+        
+        @media ('max-width: 700px'){
+            font-size: 1.4rem;
+        }
+    }
+    &-drink{
+        position: absolute;
+        right: 11rem;
+        bottom: -11.5rem;
+        
+        @media ('max-width: 850px'){
+            position: static;
+            margin-top: 3rem;
+        }
+    }
+}
+.header-title{
+    @include paragraph($_font-size: 4.5rem, $_color: #000000);
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    margin-bottom: 14rem;
+    text-shadow: 0px 9px 10px rgba(0, 0, 0, 0.24);
+    
+    @media ('max-width: 700px'){
+        font-size: 3rem;
+        margin-bottom: 9rem;
+    }
+    
+    &_main{
+        background-color: #b2f2ee;
+        padding: 0 1rem;
+    }
+}
+.mainShop{
+    position: relative;
+    right: 0.5rem;
+    @media ('max-width: 700px'){
+        position: static;
+    }
+}
+.mainAgensy{
+    position: relative;
+    left: 0.5rem;
+     @media ('max-width: 700px'){
+        position: static;
+    }
+}
+
+.displayBlock{
+    display: block;
+}
+.displayNone{
+    display: none;
+}
+
+
+
+
+
+
+
+// Стили для формы обратной связи
+.ContactUs-Modal {
+    @include divModal();
+
+    &_content {
+        @include divModalContent();
+        border: 2px solid #fff;
+        background-color: #b2f2ee;
+        color: #000;
+        font-size: 1.8rem;
+        text-align: center;
+
+        @media ($mobileM) {
+            font-size: 1.6rem;
+        }
+
+        &-form {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+
+            @media ($tablet-Minus) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &-name,
+        &-number {
+            @include input($_color: #000, $_font_size: 1.4rem);
+            padding-left: 1rem;
+            margin-right: 1rem;
+            max-width: 25rem;
+            width: 100%;
+            margin-bottom: 2rem;
+
+            @media ($mobileL) {
+                margin-right: 0;
+            }
+        }
+
+        &-submit {
+            @include button();
+            height: 4.3rem;
+            cursor: pointer;
+            max-width: 10rem;
+            width: 100%;
+        }
+
+        @include colorPlaceholderInput($_color: #000);
+    }
+}
+
+.Contact_modal_close,
+.Learn_modal_close {
+    @include modalClose($_color: darken(#fff, 20%))
+}
+
+.Contact_modal_close:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal_active {
+    display: block !important;
+}
+// Стили для формы обратной связи END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

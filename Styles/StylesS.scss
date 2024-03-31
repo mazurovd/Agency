@@ -1,0 +1,61 @@
+/*  Шрифты
+    font-family: 'Montserrat', sans-serif; 400 700
+    font-family: 'Raleway', sans-serif;    400 500
+    font-family: 'Merriweather', serif;    400 700
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+p, li, ul {
+    margin: 0;
+}
+
+
+.container{
+    max-width: 117rem;
+    margin: 0 auto;
+}
+
+
+@import "mixins.scss";
+@import "Animation-styles/Header-animation.css";
+@import "header.scss";
+@import "About.scss";
+@import "works.scss";
+@import "Services.scss";
+@import "Team.scss";
+@import "Animation-styles/Reviews_slider-animation.css";
+@import "Reviews.scss";
+@import "LogosBottom.scss";
+@import "footer.scss";
+
+
+
+
+
+
+
+
+
+
+

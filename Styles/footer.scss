@@ -1,0 +1,47 @@
+.footer {
+    padding: 9rem 0;
+    text-align: center;
+    background-color: #262b2e;
+    
+    &_inscription{
+        @include paragraph($_font-size: 1.6rem, $_lineHeght: normal, $_color: #d4d5d5, $_font-family: $Raleway, $_letterSpace: 0.1px);
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+    &_socNets {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3.8rem;
+    }
+    &_socNets-A {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.5rem;
+        height: 4rem;
+        background-color: #424648;
+        text-decoration: none;
+        margin-right: 0.7rem;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            background-color: #6eeee4;
+            .socNets_fontawe {
+                color: #070e0d;
+            }
+        }
+    }
+    
+    &_copyright{
+        @include paragraph($_font-size: 1.6rem, $_lineHeght: normal, $_color: #7d8082, $_font-family: $Raleway, $_letterSpace: 0.1px);
+        font-weight: 500;
+        padding: 0 1.5rem;
+    }
+}
+
+.socNets_fontawe {
+    color: #bbb8b9;
+    font-size: 2.2rem;
+}

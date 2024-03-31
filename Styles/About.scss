@@ -1,0 +1,184 @@
+/*
+$tablet-Plus: 'max-width: 951px';
+$tablet: 'max-width: 768px';
+$tablet-Minus: 'max-width: 600px';
+$mobilePlusL: 'max-width: 525px';
+$mobileL: 'max-width: 426px';
+$mobileM: 'max-width: 375px';
+$tabletPro: 'max-width: 1024px';
+*/
+
+
+
+.About, .Works, .Services, .Reviews {
+    padding: 13rem 0 11rem 0rem;
+    background-color: #f8fafa;
+}
+
+.About-content_slider {
+    max-width: max-content; //477px;
+    width: 100%;
+}
+
+.About-content {
+    padding: 15rem 2rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    @media ($tabletPro) {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10rem;
+    }
+    
+    @media ($mobilePlusL) {
+        padding-top: 5rem;
+    }
+
+    &_descr {
+        padding-top: 2.7rem;
+        padding-right: 1rem;
+        margin-left: 9rem;
+
+        @media ($tabletPro) {
+            padding: 6rem 1rem 0;
+            margin-left: 0rem;
+            text-align: center;
+        }
+    }
+
+    &_descr-part1 {
+        &_title {
+            @include paragraph($_font-size: 2rem, $_lineHeght: 2.8rem, $_color: #3e3f3f, $_font-family: $Merriweather);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0 0 1.6rem 0rem;
+        }
+
+        &_p1,
+        &_p2 {
+            @include paragraph($_font-size: 1.6rem, $_lineHeght: 2.8rem, $_color: #404141, $_font-family: $Raleway, $_letterSpace: 0.5px);
+            font-weight: 400;
+            margin: 0 0 3rem 0rem;
+        }
+    }
+
+    &_descr-part2 {
+        &_title {
+            @include paragraph($_font-size: 1.7rem, $_lineHeght: 2.8rem, $_color: #3e3f3f, $_font-family: $Merriweather);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0 0 1.6rem 0rem;
+        }
+
+        &_p1 {
+            @include paragraph($_font-size: 1.6rem, $_lineHeght: 2.8rem, $_color: #404141, $_font-family: $Raleway, $_letterSpace: 0.5px);
+            font-weight: 400;
+            margin: 0 0 1.6rem 0rem;
+        }
+    }
+}
+
+.About-title,  .Works-title, .Services-title, .Team-title, .Reviews-title{
+    text-align: center;
+
+    &_main {
+        @include paragraph($_font-size: 3.8rem, $_lineHeght: 2.8rem, $_color: #181919);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        
+        @media ($tablet) {
+            font-size: 2.8rem;
+            line-height: 2.2rem;
+        }
+    }
+
+    &_descr {
+        @include paragraph($_font-size: 1.8rem, $_lineHeght: 2.8rem, $_color: #5e5f5f);
+        font-family: 'Merriweather', serif;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        @media ($tabletPro) {
+            padding: 0 2rem;
+        }
+        
+        @media ($tablet) {
+            font-size: 1.2rem;
+            line-height: 2.0rem;
+        }
+    }
+}
+
+.slider-backgrnd {
+    background-image: url(../IMG/Rectangle_for_Slider.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 5rem;
+    max-width: 477px;
+    width: 100%;
+    height: max-content;
+    
+    @media ($tabletPro) {
+        margin-left: 0;
+    }
+}
+
+.slider-items {
+    max-width: 47.7rem;
+    width: 100%;
+}
+
+.slider-item {
+    max-width: 47.7rem;
+    width: 100%;
+    line-height: 0;
+    bottom: 3.5rem;
+    left: 4.5rem;
+    padding: 0 2.5rem;
+
+    display: flex !important;
+    justify-content: center;
+}
+
+.slider-img {
+    max-width: 392px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(20, 20, 21, 0.13);
+}
+
+.slick-dots {
+    li {
+        background-color: #d0d0d0;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 3px;
+        margin: 0 3px;
+
+        button {
+            display: none;
+        }
+    }
+}
+
+.slick-list {
+    max-width: 47.7rem;
+    width: 100%;
+    padding: 2.7rem 0;
+}
+
+.slick-track {
+    max-width: 1908px;
+    width: 100%;
+}
+
+.slick-dots {
+    bottom: -32px;
+
+    .slick-active {
+        background-color: #71f6eb;
+    }
+}
+
+//border-shadow: 3.517px 8.285px 5px rgba(0,0,0,0.24);

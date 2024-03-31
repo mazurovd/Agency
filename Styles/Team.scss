@@ -1,0 +1,122 @@
+.Team {
+    padding-top: 12.5rem;
+}
+
+.Team-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5rem 1.2rem;
+    
+    @media ('max-width: 782px') {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.Team-item {
+    position: relative;
+    margin-right: 1.3rem;
+    margin-bottom: 1.5rem;
+    line-height: 0;
+    max-width: 37rem; // По ширине картинки
+    width: 100%;
+    
+    &:hover, &:active {
+        .Team-item_about_content{
+            display: inline-block;
+        }
+    }
+    
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+    @media ('max-width: 1168px') {
+        &:nth-child(3n) {
+            margin-right: 1.3rem;
+        }
+    }
+    @media ('max-width: 782px') {
+        &:nth-child(n) {
+            margin-right: 0;
+        }
+    }
+    &_about {
+        &_content {
+            display: none; // До наведения мышки скрыто
+            position: absolute;
+            bottom: 1.8rem;
+            left: 1.8rem;
+            max-width: 33.5rem;
+            width: 100%;
+            //    height: 24rem;
+            background-color: #70f6eb;
+            padding: 4.2rem 5.4rem 4.2rem 3.8rem;
+            z-index: 1;
+            @media ('max-width: 400px') {
+                /*
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly; */
+                padding: 1rem;
+                max-width: 80%;
+                min-height: 20rem;
+                left: 3.5rem;
+            }
+        }
+        &-treangl {
+            display: inline-block;
+            position: absolute;
+            top: -18px;
+            left: 10px;
+            width: 0;
+            height: 0;
+            border-left: 2.1rem solid transparent;
+            border-right: 2.1rem solid transparent;
+            border-bottom: 3.7rem solid #70f6eb;
+            z-index: -1;
+        }
+        &-socNets_A {
+            text-decoration: none;
+            margin-right: 1.5rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &_img {
+        max-width: 37rem;
+        width: 100%;
+    }
+}
+
+.Team-item_about-who {
+    margin-bottom: 1.5rem;
+    @media ('max-width: 400px') {
+        margin-bottom: 1rem;
+    }
+    &_name {
+        display: inline-block;
+        @include paragraph($_font-size: 2rem, $_lineHeght: 2.4rem, $_color: #272727, $_font-family: $Merriweather, $_letterSpace: 0.5px);
+        font-weight: 700;
+        @media ('max-width: 400px') {
+            font-size: 1.6rem;
+        }
+    }
+    &_proff {
+        display: inline-block;
+        @include paragraph($_font-size: 1.5rem, $_lineHeght: 2.4rem, $_color: #767070, $_font-family: $Merriweather, $_letterSpace: 0.3px);
+        @media ('max-width: 400px') {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.Team-item_about-text {
+    margin-bottom: 2.9rem;
+    @include paragraph($_font-size: 1.6rem, $_lineHeght: 2.4rem, $_color: #000, $_font-family: $Raleway, $_letterSpace: 0.1px);
+    @media ('max-width: 400px') {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+}

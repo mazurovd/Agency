@@ -1,0 +1,216 @@
+.Reviews {
+    background-color: #f9fbfb;
+    margin-bottom: 5rem;
+    overflow: hidden;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    @media ($tabletPro) {
+        padding: 13rem 2rem 18rem 2rem;
+    }
+}
+
+%NotActiveSlide {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    text-align: center;
+    z-index: -1;
+}
+
+.ReviewsAll-sliders {
+    position: relative;
+    padding-top: 11.5rem;
+    margin: 0 2rem;
+    //  padding-bottom: 3rem; // Вне закона
+    //    overflow: hidden;
+}
+
+.reviews-backgrnd {
+    background-image: url(../IMG/Team/reviews_backgrnd.png);
+    background-image: url(../IMG/Team/reviews_backgrnd.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 5rem;
+    max-width: 390px;
+    width: 100%;
+    height: max-content;
+    @media ($tabletPro) {
+        margin-left: 0;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.Reviews-slider {
+    display: flex;
+    justify-content: center;
+    @media ($tablet-Plus) {
+        flex-direction: column;
+    }
+    &_quote {
+        margin-left: 8rem;
+        position: relative; // Костыль
+        top: 2.4rem; //Прин-но выравниваем цитату с фото
+        max-width: 66.5rem;
+        width: 100%;
+        height: 36.2rem;
+        background-color: #eaebed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media ($tablet-Plus) {
+            margin: 0 auto;
+        }
+        &-who{
+            margin-bottom: 2rem;
+        }
+        &-who_name {
+            display: inline-block;
+            @include paragraph($_font-size: 2rem, $_lineHeght: 2.4rem, $_color: #272727, $_font-family: $Merriweather, $_letterSpace: 0.5px);
+            font-weight: 700;
+         //   margin-bottom: 2.8rem;
+            text-transform: uppercase;
+        }
+        &-who_proff {
+            @include paragraph($_font-size: 1.5rem, $_lineHeght: 2.4rem, $_color: #767070, $_font-family: $Merriweather, $_letterSpace: 0.3px);
+            text-transform: uppercase;
+        }
+        &-text {
+            max-width: 505px;
+            @include paragraph($_font-size: 1.6rem, $_lineHeght: 2.7rem, $_color: #000, $_font-family: $Raleway, $_letterSpace: 0.6px);
+            text-align: center;
+            margin-bottom: 3.2rem;
+            padding: 0 1.5rem;
+        }
+    }
+    /* Для слайдера */
+    @extend %NotActiveSlide;
+    //  display: none; /* !!!! */
+}
+
+.Reviews_slider-img {
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 2.344px 5.523px 12px rgba(20, 20, 21, 0.17);
+    //  box-shadow: 0 0 15px rgba(20, 20, 21, 0.13);
+}
+
+.Reviews_slider-item {
+    @extend %NotActiveSlide;
+    max-width: 39rem;
+    width: 100%;
+    line-height: 0;
+    bottom: 3.5rem;
+    left: 4.5rem;
+    padding: 0 2.5rem;
+    display: flex !important;
+    justify-content: center;
+}
+
+.Reviews_slider-items {
+    &_slick-dots {
+        position: absolute;
+        bottom: 1rem;
+        left: 16rem;
+        @media ($tabletPro) {
+            left: 17rem;
+        }
+        @media ($tablet-Plus) {
+            bottom: 38rem;
+            left: 0;
+            right: 0;
+        }
+    }
+    &_slick-dot {
+        background-color: #d0d0d0;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 3px;
+        margin: 0 3px;
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        cursor: pointer;
+    }
+}
+
+.Reviews_star {
+    margin-right: 3px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.Reviews-slider_leftBtn,
+.Reviews-slider_rightBtn {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    bottom: -11px;
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: #71f6eb;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2.344px 5.523px 5.5px rgba(20, 20, 21, 0.1);
+    @media ($tablet-Plus) {
+        right: 0;
+        bottom: 313px;
+    }
+    @media ($tablet) {
+        right: 0;
+        bottom: -79px;
+    }
+    &:hover {
+        @media (pointer: fine) {
+            background-color: lighten(#71f6eb, 10%);;
+        }
+    }
+}
+
+.Reviews-slider_leftBtn {
+    right: 83px;
+    z-index: 1;
+    @media ($tablet-Plus) {
+        left: 0;
+    }
+    @media ($tablet) {}
+}
+
+.displayNone {
+    display: none;
+}
+
+.active {
+    opacity: 1;
+    position: static;
+}
+
+.activeDot {
+    background-color: #71f6eb;
+}
+
+.pointerEvents {
+    pointer-events: none;
+}
+
+.Arrows {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.OpacityHalf {
+    opacity: 0.5;
+}
+
+.BackColorWhite {
+    background-color: #fff;
+}
+
+.width {
+    width: 1px;
+}

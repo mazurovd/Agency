@@ -1,0 +1,25 @@
+.Works {
+    padding-top: 13rem;
+    background-color: #fff;
+
+    &_content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12rem 0.75rem 12rem;
+        user-select: none;
+
+        &-Aimg {
+            margin: 0.75rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            @media ($mobileL) {
+                padding: 0 1.2rem;
+            }
+        }
+    }
+}
